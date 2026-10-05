@@ -1,109 +1,136 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pure Essence</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pure Essence, cosméticos para cuidar de você."
+    />
+    <title>Pure Essence | Cosméticos</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <a class="logo" href="#">Pure <span>Essence</span></a>
 
-<header>
-    <h1>Pure Essence</h1>
-</header>
+      <button class="menu-button" id="menuButton" aria-label="Abrir menu">
+        ☰
+      </button>
 
-<div class="menu">
-    <div class="menu-icon">☰</div>
-    <div class="dropdown-menu">
-        <a href="#carrinho">Carrinho</a>
-        <a href="#sobre">Sobre Nossa Loja</a>
-        <a href="#contato">Entre em Contato</a>
-    </div>
-</div>
+      <nav class="nav" id="nav">
+        <a href="#sobre">Sobre</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#contato">Contato</a>
+        <button id="cartButton" class="cart-button">
+          🛒 Carrinho <span id="cartCount">0</span>
+        </button>
+      </nav>
+    </header>
 
-
-<div class="container">
-    <section class="sobre" id="sobre">
-        <img src="https://cosmeticinnovation.com.br/wp-content/uploads/2017/10/L%E2%80%99Occitane2.png">
+    <main>
+      <section class="hero">
         <div>
-            <h2>Sobre nossa loja</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum saepe ipsa possimus porro, alias modi magni inventore eum impedit in dignissimos, aperiam perspiciatis, minus esse. Maxime aut voluptates rem eligendi!.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores distinctio facere, quasi necessitatibus officiis voluptates? Porro labore recusandae doloribus aliquid laudantium voluptatem et reiciendis consectetur sint, nihil eos deserunt aspernatur.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat consequatur quo temporibus, qui asperiores officia odio laboriosam natus voluptate illo sint aliquam itaque iure quisquam quam. Ratione corrupti iusto totam.</p>
+          <p class="eyebrow">beleza natural e cuidado diário</p>
+          <h1>Realce sua beleza com <em>Pure Essence</em></h1>
+          <p>
+            Produtos selecionados para transformar sua rotina de autocuidado em
+            um momento especial.
+          </p>
+          <a href="#produtos" class="button">Conhecer produtos</a>
         </div>
-    </section>
+      </section>
 
-    <div class="produtos" id="produtos">
-        <h2>Produtos</h2>
-    </div>
-    <hr class="linha-separacao">
-
-    <section class="produtos">
-        <div class="produto">
-            <img src="https://images-americanas.b2w.io/produtos/01/00/img/71647/5/71647574_1GG.jpg" alt="creme corporal">
-            <h3>Creme para o corpo</h3>
-            <p>Creme hidratante para o corpo</p>
-            <button class="botao-adicionar">Adicionar ao carrinho</button>
+      <section class="about section" id="sobre">
+        <div class="about-image"></div>
+        <div>
+          <p class="eyebrow">sobre nós</p>
+          <h2>Cuidado que começa na essência</h2>
+          <p>
+            A Pure Essence nasceu para tornar o autocuidado mais simples, leve e
+            prazeroso.
+          </p>
+          <p>
+            Escolhemos produtos que combinam qualidade, delicadeza e praticidade
+            para você cuidar da pele todos os dias.
+          </p>
         </div>
-        <div class="produto">
-            <img src="https://io.convertiez.com.br/m/novaeracosmeticos/shop/products/images/39014/medium/cr-loccitane-50ml-au-maos-firmador-caju-22776_22732.jpg" alt="creme para mãos">
-            <h3>Creme para mãos</h3>
-            <p>Creme hidratante para mãos</p>
-            <button class="botao-adicionar">Adicionar ao carrinho</button>
+      </section>
+
+      <section class="section" id="produtos">
+        <p class="eyebrow">nossa seleção</p>
+        <h2>Produtos favoritos</h2>
+
+        <div class="products">
+          <article class="product">
+            <div class="product-image image-body"></div>
+            <div class="product-content">
+              <h3>Creme corporal</h3>
+              <p>Hidratação profunda e toque macio para sua pele.</p>
+              <strong>R$ 49,90</strong>
+              <button class="button add-button" data-product="Creme corporal">
+                Adicionar
+              </button>
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="product-image image-hands"></div>
+            <div class="product-content">
+              <h3>Creme para mãos</h3>
+              <p>Cuidado delicado para mãos hidratadas e perfumadas.</p>
+              <strong>R$ 29,90</strong>
+              <button class="button add-button" data-product="Creme para mãos">
+                Adicionar
+              </button>
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="product-image image-face"></div>
+            <div class="product-content">
+              <h3>Sabonete facial</h3>
+              <p>Limpeza suave para uma pele fresca e equilibrada.</p>
+              <strong>R$ 39,90</strong>
+              <button class="button add-button" data-product="Sabonete facial">
+                Adicionar
+              </button>
+            </div>
+          </article>
         </div>
-        <div class="produto">
-            <img src="https://dcdn.mitiendanube.com/stores/001/440/246/products/sabonete-liquido-43187ba7431ba862ed17083844557678-480-0.jpg" alt="Sabonete líquido">
-            <h3>Sabonete líquido para o rosto</h3>
-            <p>Sabonete líquido em óleo</p>
-            <button class="botao-adicionar">Adicionar ao carrinho</button>
-        </div>
-        <div class="produto">
-            <img src="https://cdn.dlojavirtual.com/static1/105401/sku/thumb_maos-e-pes-creme-de-maos-multibeneficios-caju-50ml-p-1707757126259.jpg" alt="creme para os pés">
-            <h3>Creme para os pés</h3>
-            <p>Creme suavisante para os pés</p>
-            <button class="botao-adicionar">Adicionar ao carrinho</button>
-        </div>
-    </section>
-</div>
+      </section>
 
-<section id="contato">
-    <h2>Entre em Contato</h2>
-    <form>
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
+      <section class="contact section" id="contato">
+        <p class="eyebrow">fale conosco</p>
+        <h2>Entre em contato</h2>
+        <form id="contactForm">
+          <input type="text" placeholder="Seu nome" required />
+          <input type="email" placeholder="Seu melhor e-mail" required />
+          <textarea
+            placeholder="Como podemos ajudar?"
+            rows="5"
+            required
+          ></textarea>
+          <button class="button" type="submit">Enviar mensagem</button>
+        </form>
+        <p id="formMessage" class="form-message"></p>
+      </section>
+    </main>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+    <aside class="cart-panel" id="cartPanel">
+      <div class="cart-header">
+        <h2>Seu carrinho</h2>
+        <button id="closeCart" type="button">×</button>
+      </div>
+      <ul id="cartItems"></ul>
+      <p id="emptyCart">Seu carrinho está vazio.</p>
+    </aside>
 
-        <label for="mensagem">Mensagem:</label>
-        <textarea id="mensagem" name="mensagem" required></textarea>
+    <footer>
+      <p>© 2026 Pure Essence. Feito com carinho.</p>
+    </footer>
 
-        <button type="submit">Enviar</button>
-    </form>
-</section>
-
-<section id="redes-sociais">
-    <h2>Nos Siga nas Redes Sociais</h2>
-    <div class="icones-redes-sociais">
-        <a href="https://www.facebook.com" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" width="40">
-        </a>
-        <a href="https://www.tiktok.com" target="_blank">
-            <img src="https://seeklogo.com/images/T/tiktok-app-icon-logo-0F5AD7AE01-seeklogo.com.png" alt="Tiktok" width="40">
-        </a>
-        <a href="https://www.instagram.com" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" width="40">
-        </a>
-        <a href="https://www.linkedin.com" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg" alt="LinkedIn" width="100">
-        </a>
-    </div>
-</section>
-
-
-<footer>
-    <p>&copy; 2024 Pure Essence. Todos os direitos reservados.</p>
-</footer>
-
-</body>
+    <div class="toast" id="toast"></div>
+  </body>
 </html>
